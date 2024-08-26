@@ -6,6 +6,7 @@ const options = { stats: true };
 compiler.init(options);
 app.use(bodyP.json());
 app.use("/codemirror-codemirror5-b9dd976", express.static("C:/Users/HP/Desktop/FinalTry/codemirror-codemirror5-b9dd976"));
+
 app.get("/", function (req, res) {
     compiler.flush(function () {
         console.log("All temporary files are flushed !!")
