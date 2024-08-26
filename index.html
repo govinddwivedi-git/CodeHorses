@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-success"><i class="bi bi-play-fill"></i></button>
+                    <button type="button" class="btn btn-success" id="run"><i class="bi bi-play-fill"></i></button>
                 </div>
             </div>
             <textarea type="text" class="form-control" aria-label="First name" id="editor"></textarea>
@@ -48,11 +48,11 @@
 
             <div class="h-50">
                 <label for="input" class="text-light mt-3 mb-2">Input</label>
-                <textarea type="text" class="form-control h-75" aria-label="Last name"></textarea>
+                <textarea type="text" class="form-control h-75" aria-label="Last name" id="input"></textarea>
             </div>
             <div class="h-50">
                 <label for="output" class="text-light mb-2">Output</label>
-                <textarea type="text" class="form-control h-75" aria-label="Last name"></textarea>
+                <textarea type="text" class="form-control h-75" aria-label="Last name" id="output"></textarea>
             </div>
         </div>
     </div>
@@ -80,6 +80,31 @@
         else{
             editor.setOption("mode","text/x-c++src");
         }
+    });
+
+    let run = document.getElementById("run");
+    let input = document.getElementById("input");
+    let output = document.getElementById("output");
+
+    let code;
+    run.addEventListener("click",async ()=>{
+       code = {
+              code : editor.getValue(),
+              input : input.value,
+              lang: option.value,
+       }
+
+       let oData = await fetch("http://localhost:8000/compile",{
+           method:"POST",
+           headers:{
+               "Content-Type":"application/json",
+           },
+           body:JSON.stringify(code),
+       });
+       
+       let d = await oData.json();
+       output.value = d.output;
+        
     });
 </script>
 
