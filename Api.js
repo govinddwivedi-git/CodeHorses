@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const bodyP = require('body-parser');
 const compiler = require('compilex');
@@ -6,6 +7,8 @@ const options = { stats: true };
 compiler.init(options);
 app.use(bodyP.json());
 app.use("/codemirror-codemirror5-b9dd976", express.static("C:/Users/HP/Desktop/FinalTry/codemirror-codemirror5-b9dd976"));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get("/", function (req, res) {
     compiler.flush(function () {
