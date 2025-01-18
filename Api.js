@@ -6,7 +6,7 @@ const compiler = require('compilex');
 const options = { stats: true };
 compiler.init(options);
 app.use(bodyP.json());
-app.use("/codemirror-codemirror5-b9dd976", express.static("C:/Users/HP/Desktop/FinalTry/codemirror-codemirror5-b9dd976"));
+app.use("/codemirror", express.static("C:/Users/HP/Desktop/Important/CodeHorses/codemirror"));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -14,7 +14,7 @@ app.get("/", function (req, res) {
     compiler.flush(function () {
         console.log("All temporary files are flushed !!")
     });
-    res.sendFile("C:/Users/HP/Desktop/FinalTry/index.html")
+    res.sendFile("C:/Users/HP/Desktop/Important/CodeHorses/index.html")
 })
 app.post("/compile", function (req, res) {
     //if windows  

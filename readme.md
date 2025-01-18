@@ -39,19 +39,30 @@ This project is a web-based code editor and compiler, built using CodeMirror for
 3. **Start the Server:**
 
     ```bash
-    npm start
+    Nodemon Api.js
     ```
 
 4. **Open in Browser:**
 
     Navigate to `http://localhost:8000` in your web browser.
 
+## Project Screenshots
+
+| ![Screenshot 1](./screenshots/ss1.png) | ![Screenshot 2](./screenshots/ss2.png) |
+|---|---|
+| Sign Up Form | Login Form |
+
+| ![Screenshot 3](./screenshots/ss3.png) | ![Screenshot 4](./screenshots/ss4.png) |
+|---|---|
+| Dashboard | Analysis of Codeforces |
+
+
 ## Usage
 
 - Open the editor in your browser.
 - Select the programming language from the dropdown.
 - Write your code in the editor.
-- Use the buttons to generate, debug, explain, or run your code.
+- Use the buttons to run your code.
 - View the output in the designated output area.
 
 ## Contributing
