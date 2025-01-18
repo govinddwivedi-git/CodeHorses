@@ -12,10 +12,6 @@ This project is a web-based code editor and compiler, built using CodeMirror for
 - Integrates CompileX for compiling and executing code on the server side.
 - Supports real-time compilation of code written in C, C++, Java, Python, and more.
 
-### User-Friendly Interface
-- Clean and minimalistic design for ease of use.
-- Responsive layout suitable for both desktop and mobile devices.
-
 ## Installation
 
 ### Prerequisites
