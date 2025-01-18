@@ -50,11 +50,11 @@ This project is a web-based code editor and compiler, built using CodeMirror for
 
 | ![Screenshot 1](./screenshots/ss1.png) | ![Screenshot 2](./screenshots/ss2.png) |
 |---|---|
-| Sign Up Form | Login Form |
+| Select language | Python |
 
 | ![Screenshot 3](./screenshots/ss3.png) | ![Screenshot 4](./screenshots/ss4.png) |
 |---|---|
-| Dashboard | Analysis of Codeforces |
+| C++ | Java |
 
 
 ## Usage
